@@ -1,0 +1,64 @@
+name: Process one target
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      target:
+        required: true
+        type: string
+
+
+jobs:
+
+  process:
+    name: Process ${{ inputs.target }}
+
+    strategy:
+      matrix:
+        include:
+
+          - suffix: '_u'
+            flags: ''
+            pre_tex: ''
+            flavours: '2u'
+            publish: false
+
+          - suffix: ''
+            flags: ''
+            pre_tex: '\def\TAGPDF{}'
+            flavours: '4f ua2 wt1r wt1a'
+            publish: true
+
+          - suffix: '_A'
+            flags: ''
+            pre_tex: '\def\PDFAA{}'
+            flavours: '3a ua1'
+            publish: false
+
+          - suffix: '_p'
+            flags: '-pdflatex'
+            pre_tex: ''
+            flavours: '2u'
+            publish: false
+
+
+    uses: ./.github/workflows/process.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      directory: ${{ inputs.target }}
+      filename: ${{ matrix.suffix }}
+      flags: ${{ matrix.flags }}
+      pre_tex: ${{ matrix.pre_tex }}
+      flavours: ${{ matrix.flavours }}
+      publish: ${{ matrix.publish }}

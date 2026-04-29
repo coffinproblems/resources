@@ -1,0 +1,79 @@
+name: Build PDF
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      directory:
+        required: true
+        type: string
+
+      filename:
+        required: true
+        type: string
+
+      flags:
+        required: true
+        type: string
+
+      pre_tex:
+        required: true
+        type: string
+
+      label:
+        required: true
+        type: string
+
+      publish:
+        required: true
+        type: boolean
+
+
+jobs:
+
+  build:
+    name: Generate PDF document for ${{ inputs.directory }}${{ inputs.filename }}
+
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive@${{ inputs.texlive_digest }}
+    defaults:
+      run:
+        working-directory: ./src/${{ inputs.directory }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Directory name
+        run: |
+          path=${{ inputs.directory }}
+          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+
+      - name: Build ${{ env.dirname }}${{ inputs.filename }}
+        env:
+          SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+          FORCE_SOURCE_DATE: 1
+        run: latexmk ${{ inputs.flags }} -g -usepretex="${{ inputs.pre_tex }}" main.tex -jobname="${{ env.dirname }}${{ inputs.filename }}"
+
+      - name: Upload PDF of ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
+          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename }}.pdf
+
+      - name: Upload logs on build failure
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ inputs.label }}-build-logs-${{ env.dirname }}${{ inputs.filename }}
+          path: src/${{ inputs.directory }}/build/*.log

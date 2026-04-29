@@ -1,0 +1,84 @@
+name: Build ebook
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      directory:
+        required: true
+        type: string
+
+      filename:
+        required: true
+        type: string
+
+
+jobs:
+
+  build:
+    name: Generate EPUB document for ${{ inputs.filename }}${{ inputs.filename }}
+
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive@${{ inputs.texlive_digest }}
+    defaults:
+      run:
+        working-directory: ./src/${{ inputs.directory }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Directory name
+        run: |
+          path=${{ inputs.directory }}
+          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+
+      # - name: Build ${{ env.dirname }}${{ inputs.filename }} as ebook with MathML formulas
+      #   id: build_mathml
+      #   env:
+      #     SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+      #     FORCE_SOURCE_DATE: 1
+      #   run: tex4ebook --build-dir ./build_mathml --output-dir ./output --jobname "${{ env.dirname }}${{ inputs.filename }}-mathml" -f epub3 main.tex mathml
+
+      - name: Build ${{ env.dirname }}${{ inputs.filename }} as ebook with SVG formulas
+        id: build_svg
+        env:
+          SOURCE_DATE_EPOCH: ${{ inputs.timestamp }}
+          FORCE_SOURCE_DATE: 1
+        run: tex4ebook --build-dir ./build_svg --output-dir ./output --jobname "${{ env.dirname }}${{ inputs.filename }}-svg" -f epub main.tex svg
+
+      # - name: Upload MathML ebook of ${{ env.dirname }}${{ inputs.filename }}
+      #   uses: actions/upload-artifact@v7
+      #   with:
+      #     name: ebook-${{ env.dirname }}${{ inputs.filename }}-mathml
+      #     path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename}}-mathml.epub
+
+      - name: Upload SVG ebook of ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: ebook-${{ env.dirname }}${{ inputs.filename }}-svg
+          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename}}-svg.epub
+
+      # - name: Upload logs on failure of MathML build
+      #   if: failure() && steps.build_mathml.outcome == 'failure'
+      #   uses: actions/upload-artifact@v7
+      #   with:
+      #     name: build-mathml-logs-${{ env.dirname }}${{ inputs.filename }}
+      #     path: src/${{ inputs.directory }}/build_mathml/*.log
+
+      - name: Upload logs on failure of SVG build
+        if: failure() && steps.build_svg.outcome == 'failure'
+        uses: actions/upload-artifact@v7
+        with:
+          name: build-svg-logs-${{ env.dirname }}${{ inputs.filename }}
+          path: src/${{ inputs.directory }}/build_svg/*.log

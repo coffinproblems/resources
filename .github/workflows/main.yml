@@ -1,0 +1,178 @@
+name: Compile, test, and upload
+
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".gitignore"
+
+  pull_request:
+    paths-ignore:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".gitignore"
+
+  workflow_dispatch:
+
+
+jobs:
+
+  build_environment:
+    name: Obtain build environment information
+
+    runs-on: ubuntu-latest
+
+    outputs:
+      texlive_digest: ${{ steps.get_digest.outputs.texlive_digest }}
+      timestamp: ${{ steps.get_timestamp.outputs.timestamp }}
+      commitsha: ${{ steps.get_sha.outputs.commitsha }}
+
+    steps:
+      - name: Fetch latest TeXLive Docker image digest
+        id: get_digest
+        run: echo "texlive_digest=$(docker manifest inspect texlive/texlive:latest | jq -r '.manifests[] | select(.platform.architecture=="amd64") | .digest')" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Fetch latest commit timestamp
+        id: get_timestamp
+        run: echo "timestamp=$(git log -1 --pretty=%ct)" >> $GITHUB_OUTPUT
+
+      - name: Fetch commit SHA
+        id: get_sha
+        run: echo "commitsha=${{ github.sha }}" >> $GITHUB_OUTPUT
+
+
+  environment:
+    name: Record build environment
+    needs: build_environment
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Write build environment information to file
+        run: |
+          echo "Reproducible builds information" >> "build_env.txt"
+          echo "" >> "build_env.txt"
+          echo "TeXLive Docker image: texlive/texlive@${{ needs.build_environment.outputs.texlive_digest }}" >> "build_env.txt"
+          echo "SOURCE_DATE_EPOCH: ${{ needs.build_environment.outputs.timestamp }}" >> "build_env.txt"
+          echo "Commit SHA: ${{ needs.build_environment.outputs.commitsha }}" >> "build_env.txt"
+          echo "Workflow run ID: ${{ github.run_id }}" >> "build_env.txt"
+          echo "" >> "build_env.txt"
+          echo "Compilation information for each target:" >> "build_env.txt"
+
+      - name: Upload build environment information
+        uses: actions/upload-artifact@v7
+        with:
+          name: build-environment
+          path: build_env.txt
+
+
+  setup_targets:
+    name: Find all targets and set them up in a matrix
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src
+
+    outputs:
+      matrix: ${{ steps.configure_matrix.outputs.matrix }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Configure matrix
+        id: configure_matrix
+        run: echo "matrix=$(find . -mindepth 2 -maxdepth 2 -type d | sed 's#^\.\/##' | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
+
+
+  process_targets:
+    name: Process
+    needs: [build_environment, setup_targets]
+
+    strategy:
+      matrix:
+        target_dir: ${{ fromJson(needs.setup_targets.outputs.matrix) }}
+
+    uses: ./.github/workflows/dispatch.yml
+    with:
+      texlive_digest: ${{ needs.build_environment.outputs.texlive_digest }}
+      timestamp: ${{ needs.build_environment.outputs.timestamp }}
+      target: ${{ matrix.target_dir }}
+
+
+  upload:
+    name: Deploy to GitHub Pages
+    needs: [environment, process_targets]
+    if: github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Create directory for documents to be published
+        run: sudo mkdir publish
+
+      - name: Download PDFs
+        uses: actions/download-artifact@v8
+        with:
+          path: .
+          pattern: pdf-first-build-publish-true-*
+          merge-multiple: true
+
+      - name: Move PDFs to publish directory
+        run: sudo mv *.pdf ./publish
+
+      - name: Download ebooks
+        uses: actions/download-artifact@v8
+        with:
+          path: .
+          pattern: ebook-*
+          merge-multiple: true
+
+      - name: Move ebooks to publish directory
+        run: sudo mv *.epub ./publish
+
+      - name: Download build environment information
+        uses: actions/download-artifact@v8
+        with:
+          name: build-environment
+          path: .
+
+      - name: Move build environment information file to publish directory
+        run: sudo mv build_env.txt ./publish
+
+      - name: Download compilation information
+        uses: actions/download-artifact@v8
+        with:
+          path: .
+          pattern: compilation-info-*
+          merge-multiple: true
+
+      - name: Aggregate build environment and compilation information
+        run: sudo cat ./*.txt >> ./publish/build_env.txt
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifacts to GitHub Pages
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: publish
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

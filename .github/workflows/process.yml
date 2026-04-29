@@ -1,0 +1,176 @@
+name: Process one target
+
+
+on:
+  workflow_call:
+    inputs:
+
+      texlive_digest:
+        required: true
+        type: string
+
+      timestamp:
+        required: true
+        type: string
+
+      directory:
+        required: true
+        type: string
+
+      filename:
+        required: true
+        type: string
+
+      flags:
+        required: true
+        type: string
+
+      pre_tex:
+        required: true
+        type: string
+
+      flavours:
+        required: true
+        type: string
+
+      publish:
+        required: true
+        type: boolean
+
+
+jobs:
+
+  record:
+    name: Record compilation information in file
+    if: inputs.publish == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Directory name
+        run: |
+          path=${{ inputs.directory }}
+          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+
+      - name: Write information
+        run: |
+          ENV_FILE="compilation_info-${{ env.dirname }}${{ inputs.filename }}.txt"
+          echo "" >> $ENV_FILE
+          echo "jobname: ${{ env.dirname }}${{ inputs.filename }}" >> $ENV_FILE
+          #echo "flags: ${{ inputs.flags }}" >> $ENV_FILE
+          echo "pre-tex: ${{ inputs.pre_tex }}" >> $ENV_FILE
+          echo "PDF standards: ${{ inputs.flavours }}" >> $ENV_FILE
+
+      - name: Upload compilation information file for ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: compilation-info-${{ env.dirname }}${{ inputs.filename }}
+          path: compilation_info-${{ env.dirname }}${{ inputs.filename }}.txt
+
+
+  build:
+    name: Build ${{ inputs.directory }}${{ inputs.filename }}
+
+    uses: ./.github/workflows/build.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      directory: ${{ inputs.directory }}
+      filename: ${{ inputs.filename }}
+      flags: ${{ inputs.flags }}
+      pre_tex: ${{ inputs.pre_tex }}
+      label: first
+      publish: ${{ inputs.publish }}
+
+
+  validate:
+    name: Validate ${{ inputs.directory }}${{ inputs.filename }}
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Directory name
+        run: |
+          path=${{ inputs.directory }}
+          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+
+      - name: Download PDF from build job
+        uses: actions/download-artifact@v8
+        with:
+          name: pdf-first-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
+          path: .
+
+      - name: Validate against PDF standards ${{ inputs.flavours }}
+        run: |
+          for flav in ${{ inputs.flavours }}; do
+            output=$(docker run --rm -v "$(pwd)":/data verapdf/cli --flavour $flav --format text "${{ env.dirname }}${{ inputs.filename }}.pdf")
+            if [[ "$output" != PASS* ]]; then
+              exit 1
+            fi
+          done
+
+
+  reproduce:
+    name: Build ${{ inputs.directory }}${{ inputs.filename }} again
+    needs: build
+
+    uses: ./.github/workflows/build.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      directory: ${{ inputs.directory }}
+      filename: ${{ inputs.filename }}
+      flags: ${{ inputs.flags }}
+      pre_tex: ${{ inputs.pre_tex }}
+      label: second
+      publish: ${{ inputs.publish }}
+
+
+  compare:
+    name: Check build reproducibility of ${{ inputs.directory }}${{ inputs.filename }}
+    needs: reproduce
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Directory name
+        run: |
+          path=${{ inputs.directory }}
+          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+
+      - name: Create directories to download built PDFs
+        run: sudo mkdir first second
+
+      - name: Download first PDF build of ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/download-artifact@v8
+        with:
+          name: pdf-first-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
+          path: .
+
+      - name: Move first PDF build of ${{ env.dirname }}${{ inputs.filename }} to its directory
+        run: sudo mv ${{ env.dirname }}${{ inputs.filename }}.pdf first/${{ env.dirname }}${{ inputs.filename }}.pdf
+
+      - name: Download second PDF build of ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/download-artifact@v8
+        with:
+          name: pdf-second-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
+          path: .
+
+      - name: Move second PDF build of ${{ env.dirname }}${{ inputs.filename }} to its directory
+        run: sudo mv ${{ env.dirname }}${{ inputs.filename }}.pdf second/${{ env.dirname }}${{ inputs.filename }}.pdf
+
+      - name: Check if the two builds of ${{ env.dirname }}${{ inputs.filename }} match exactly
+        run: cmp -s first/${{ env.dirname }}${{ inputs.filename }}.pdf second/${{ env.dirname }}${{ inputs.filename }}.pdf
+
+
+  build_ebook:
+    name: Build ebook ${{ inputs.directory }}${{ inputs.filename }}
+    if: inputs.publish == true
+
+    uses: ./.github/workflows/build_ebook.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      directory: ${{ inputs.directory }}
+      filename: ${{ inputs.filename }}

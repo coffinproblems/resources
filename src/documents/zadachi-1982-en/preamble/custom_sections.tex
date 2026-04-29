@@ -1,0 +1,24 @@
+% Custom section headings
+
+% Subsection for problem
+\newcounter{problemcounter}
+\newcommand{\problem}[1][{}]{
+  \refstepcounter{problemcounter}
+  \vspace{\spaceproblems}
+  \subsection*{\texorpdfstring{Problem \theproblemcounter#1}{Problem \theproblemcounter}}
+}
+
+% Subsubsection for solution
+\newcounter{solutioncounter}[problemcounter]
+\newcommand{\solution}{
+  \refstepcounter{solutioncounter}
+  \subsubsection*{Solution \thesolutioncounter}
+}
+\newcommand{\singlesolution}{\subsubsection*{Solution}}
+
+% How much space to leave between problems
+\newcommand{\spaceproblems}{
+  0.2\baselineskip
+  plus 0.075\baselineskip
+  minus 0.05\baselineskip
+}
