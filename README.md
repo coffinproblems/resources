@@ -347,7 +347,7 @@ Below is the list of resources.
   In _Science_, volume 203.4380, page 501.
     - doi: [10.1126/science.203.4380.501.b](https://doi.org/10.1126/science.203.4380.501.b)
     - URL: [https://www.science.org/doi/10.1126/science.203.4380.501.b](https://www.science.org/doi/10.1126/science.203.4380.501.b)
-      (archived [here](https://web.archive.org/web/20240310231109im_/https://www.science.org/cms/10.1126/science.203.4380.501.a/asset/660b82a2-8d72-45c6-b611-f99c4f61ba33/assets/science.203.4380.501.a.fp.png))
+      (archived [here](https://web.archive.org/web/20260521211118im_/https://www.science.org/cms/10.1126/science.203.4380.501.b/asset/f7a439ea-4571-4bc3-b63e-f051f0d89576/assets/science.203.4380.501.b.fp.png))
 
 - Gina Bari Kolata: _Response: Problems_, 1979 (in response to _Problems_ by George Greene).
   In _Science_, volume 203.4380, page 501.
@@ -536,6 +536,10 @@ Below is the list of resources.
 - Tanya Khovanova: _The Oral Exam_, 2011.
     - URL: [https://blog.tanyakhovanova.com/2011/05/the-oral-exam/](https://blog.tanyakhovanova.com/2011/05/the-oral-exam/)
       (archived [here](https://web.archive.org/web/20210224202653/https://blog.tanyakhovanova.com/2011/05/the-oral-exam/))
+
+- Tanya Khovanova: _Arnold’s Advice_, 2022.
+    - URL: [https://blog.tanyakhovanova.com/2022/04/arnolds-advice/](https://blog.tanyakhovanova.com/2022/04/arnolds-advice/)
+      (archived [here](https://web.archive.org/web/20260217211323/https://blog.tanyakhovanova.com/2022/04/arnolds-advice/))
 
 
 - Yevgeni Berkovich: _Editor's word_, 2003.
