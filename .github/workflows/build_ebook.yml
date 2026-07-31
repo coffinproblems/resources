@@ -76,14 +76,14 @@ jobs:
               fi
           done
 
-      - name: Upload ebooks of ${{ env.dirname }}${{ inputs.filename }}
-        uses: actions/upload-artifact@v7
-        with:
-          name: ebook-${{ env.dirname }}${{ inputs.filename }}
-          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename}}*.epub
-
       - name: Upload logs of ebook builds
         uses: actions/upload-artifact@v7
         with:
           name: build-ebook-logs-${{ env.dirname }}${{ inputs.filename }}
           path: src/${{ inputs.directory }}/build_*/*.log
+
+      - name: Upload ebooks of ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: ebook-${{ env.dirname }}${{ inputs.filename }}
+          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename}}*.epub

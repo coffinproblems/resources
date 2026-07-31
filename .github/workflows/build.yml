@@ -75,15 +75,15 @@ jobs:
               fi
           done
 
-      - name: Upload PDF of ${{ env.dirname }}${{ inputs.filename }}
-        uses: actions/upload-artifact@v7
-        with:
-          name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
-          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename }}*.pdf
-
       - name: Upload build logs
         #if: failure()
         uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.label }}-build-logs-${{ env.dirname }}${{ inputs.filename }}
           path: src/${{ inputs.directory }}/build/*.log
+
+      - name: Upload PDF of ${{ env.dirname }}${{ inputs.filename }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
+          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename }}*.pdf
