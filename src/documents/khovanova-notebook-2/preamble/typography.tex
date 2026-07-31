@@ -1,6 +1,10 @@
 \ifpdftex
   \usepackage{lmodern}
-  \usepackage[T1]{fontenc}
+  \ifdefined\ORIGINAL
+    \usepackage[T2A]{fontenc}
+  \else
+    \usepackage[T1]{fontenc}
+  \fi
 \fi
 
 \ifluatex

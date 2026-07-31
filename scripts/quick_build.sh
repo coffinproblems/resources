@@ -6,12 +6,16 @@ filename_base="document_${DATE_PREFIX}"
 suffix=''
 flags=''
 pre_tex='\def\TAGPDF{}'
+# suffix='_p'
+# flags='-pdflatex'
+# pre_tex=''
 
 flavours_u=("2u")
 flavours_A=("3a" "ua1")
 flavours_UA=("4f" "ua2" "wt1r" "wt1a")
 
 flavours=$flavours_UA
+# flavours=$flavours_u
 
 
 success=true  # flag for success of the workflow
