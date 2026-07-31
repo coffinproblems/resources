@@ -2,7 +2,7 @@
 /src/*/*/build*/
 
 # Output directory
-/src/*/*output/
+/src/*/*/output/
 
 # Auxiliary files:
 *.aux

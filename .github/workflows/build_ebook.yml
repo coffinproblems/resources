@@ -86,4 +86,4 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: ebook-${{ env.dirname }}${{ inputs.filename }}
-          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename}}*.epub
+          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename }}*.epub
