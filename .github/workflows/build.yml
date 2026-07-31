@@ -49,6 +49,7 @@ jobs:
     defaults:
       run:
         working-directory: ./src/${{ inputs.directory }}
+        shell: bash
 
     steps:
       - name: Checkout repository
