@@ -1,0 +1,300 @@
+\input{pdfinfo}
+
+\documentclass{article}
+
+% Preamble
+\usepackage[russian]{babel}
+\input{preamble/preamble}
+
+% Title
+\title{}
+\author{}
+\date{}
+
+
+\newcommand{\strikethrough}[1]{  % To represent text that in the original document has been crossed out
+  \ifmmode%
+    \mathcolor{gray}{#1}%
+  \else%
+    \textcolor{gray}{\textsl{#1}}%
+}
+
+
+\begin{document}
+
+\problem  % Problem 1
+Док-ть, что $\displaystyle{\prod\limits_{k = 1}^{N} {p_k} < 4^{p_N}}$, где $p_k$ - $k$-ое простое число
+
+
+\problem  % Problem 2
+Конечно ли множество таких пар натуральных чисел,  % $\paren{a, b}, a \neq b$
+что все их простые множители совпадают, и простые множители чисел $\paren{a + 1}$ и $\paren{b + 1}$ тоже совпадают?
+
+
+\problem  % Problem 3
+Существуют ли $6$ точек на плоскости (никакие $3$ не лежат на 1 й прямой,
+расстояния между которыми измеряются различными целыми числами?
+
+
+\problem  % Problem 4
+Может ли иррац.\ число в иррац.\ степени быть рациональным?
+
+
+\problem  % Problem 5
+Можно ли на клетчатой бумаге нарисовать равностор.\ треугольник с вершинами в узлах?
+
+
+\problem  % Problem 6
+Можно ли многочлен $x^{200} \cdot y^{200} + 1$ разложить на множители?
+
+
+\problem  % Problem 7
+$a + b + c = 1$.
+Доказать что $a^2 + b^2 + c^2 \geq \dfrac{1}{3}$
+
+
+\problem  % Problem 8
+$\abs{x} < 1$ Найти с точностью до $0.01 \:$ $\paren{2 - \paren{1 - x}^{\frac{1}{2}}}^{\frac{1}{3}}$
+
+
+\problem  % Problem 9
+Сколько цифр в числе $125^{100}$?
+
+
+\problem  % Problem 10
+Найти $\sin\ang{1}$ с как можно большей точностью.
+
+
+\problem  % Problem 11
+$a_{1}, \dotsc, a_{n + 1}$ образуют геом.\ прогрессию.
+Найти $\displaystyle{\sum\limits_{k = 1}^{n} {\paren{\cos{a_{k}} \cdot \cos{a_{k + 1}}}^{- 1}}}$
+
+
+\problem  % Problem 12
+Найти все функции для которых при всех $x_1$ и $x_2$
+$\, \abs*[\big]{f(x_1) - f(x_2)} \leq \abs{x_1 - x_2}^2$
+
+
+\problem  % Problem 13
+Сколько решений имеет ур-е $16^{- x} = \log_{\frac{1}{16}}{x}$
+
+
+\problem  % Problem 14
+Решить: $x^{x^n} = n$
+
+
+\problem  % Problem 15
+Решить ур-ние: $\paren{a + \paren{a + x}^{\frac{1}{2}}}^{\frac{1}{2}} = x$
+
+
+\problem  % Problem 16
+Решить нер-во:
+$x \paren{8 \sqrt{1 - x} + \sqrt{1 + x}} < 11 \sqrt{1 + x} - 16 \sqrt{1 - x}$
+
+
+\problem  % Problem 17
+При каких $a$ ур[ ]ние: $4^{x} + 2 = a \cdot 2^{x} \sin{a x}$ имеет ровно одно решение
+
+
+\problem  % Problem 18
+Решить ур[ ]ние
+$\paren{1 - \dfrac{1}{8} \cos^{2}{x}}^{8} = 2 \sin^{2}{x}$
+
+
+\problem  % Problem 19
+Решить $\sin^{7}{x} + \sin^{-3}{x} = \cos^{7}{x} + \cos^{-3}{x}$
+
+
+\problem  % Problem 20
+Решить $2^{\sin{x}} + 2^{\cos{x}} \geq 2^{1 - \frac{\sqrt{2}}{2}}$
+
+
+\problem  % Problem 21
+Найти $r$ вписанной в тр-ик окружности, зная $r$ окружностей, вписанных в углы $\triangle$ и касающихся вписанной окр.\ внешним образом.
+
+
+\problem  % Problem 22
+В $\triangle \:$ $a$ - r.\ описанной окр., $b$ - вписанной окр., $c$ - расстояние между их центрами.
+Д-ть, что $c^2 = a^2 - 2 a b$.
+
+
+\problem  % Problem 23
+Д-ть, что $S$ вписанного и описанного $4$хуг.\ равна $\sqrt{\vphantom{A} \hphantom{A}}$ из произведения сторон.
+
+
+\problem  % Problem 24
+\newcommand{\invarc}[1]{\stackrel{\smile}{#1}}
+В окр.\ проведены хорды: $BC$ ($A$ середина), $DP$ и $EM$, проходящие через $A$,
+$D$ и $E$ - на $\invarc{BC}$, $EP$ и $DM$ пересекающие $BC$ в т.т.\ $K$ и $M$.
+Д-ть: $AK = KM$.
+
+
+\problem  % Problem 25
+Если все биссектрисы треугольника $< 1$, его $S < \dfrac{\sqrt{3}}{3}$
+
+
+\problem  % Problem 26
+Если все биссектрисы $\triangle$ равны, он \strikethrough{равнобедренный} равносторонний
+
+
+\problem  % Problem 27
+Среди всех четырехугольников с данными сторонами найти с наибольшей площадью.
+
+
+\problem  % Problem 28
+Диагонали разбивают $4$\underline{х}-угольник на $4$ $\triangle$ равного периметра $\Rightarrow$ он ромб.
+
+
+\problem  % Problem 29
+Найти ГМТ, сумма расстояний от которых до $2$\underline{х} данных прямых постоянна.
+
+
+\problem  % Problem 30
+На плоскости, раскрашенной в $3$ цвета, найдутся $2$ точки на расстоянии $1$ одного цвета.
+
+
+\problem  % Problem 31
+Циркулем построить вершины какого-нибудь квадрата.
+
+
+\problem  % Problem 32
+$\forall \, 3$ из $k$ выпуклых множеств пересекаются, тогда и все $k$ - мн-в пересекаются.
+Что можно сказать если их число $\infty$, или не все выпуклы.
+
+а в пр-ве (грани тэтраэдра
+
+
+\problem  % Problem 33
+С помощью одной линейки опустить $\perp$ из данной точки на данный диаметр данной окружности. (все случаи)
+
+
+\problem  % Problem 34
+Циркулем разделить данный отрезок на $k$ равных частей.
+
+
+\problem  % Problem 35
+Построить квадрат по $4$ м точкам на его сторонах.
+
+
+\problem  % Problem 36
+Построить $4$х-угольник по 4м:
+\begin{itemize}
+  \item[а)] углам и диагоналям,
+  \item[б)] сторонам и углу между диагоналями,
+  \item[в)] сторонам и средней линии.
+\end{itemize}
+
+
+\problem  % Problem 37
+Отсечь от данного угла прямой, проходящей через данную точку, $\triangle$
+\begin{itemize}
+  \item[а)] данного $p$;
+  \item[б)] минимального $p$.
+\end{itemize}
+
+
+\problem  % Problem 38
+Построить сеть дорог минимальной длины, соединяющих
+\begin{itemize}
+  \item[а)] $3$
+  \item[б)] $4$
+\end{itemize}
+деревни.
+
+
+% Skip problems 39--47
+\setcounter{problemcounter}{47}
+
+
+\problem  % Problem 48
+Док.\ эквивалентность свойств тетраэдра:
+\begin{itemize}
+  \item[а)] все высоты пересек.\ в одной точке;
+  \item[б)] одна из высот попадает в ортоцентр одной грани.
+\end{itemize}
+
+
+\problem  % Problem 49
+Один из тетраэдров внутри другого.
+Верно ли что у $2$\underline{го} тетр.
+\begin{itemize}
+  \item[а)] сумма длин ребер
+  \item[б)] сумма $S$ граней
+\end{itemize}
+больше?
+
+
+\problem  % Problem 50
+Все грани многогранника - $\triangle$
+Д-ть, что найдется ребро, что все $4$ прилегающие к нему угла острые.
+
+
+\problem  % Problem 51
+Сфера касается всех сторон простр.\ $4$-угольника.
+Доказать, что все точки касания лежат в $1$\underline{й} плоскости.
+
+
+\problem  % Problem 52
+Доказать, что хотя бы $1$ из перпендикуляров, опущенных из точки внутри выпуклого многогранника на его грани, попадет на грань, а не на ее продолжение.
+
+
+% Skip problem 53
+\setcounter{problemcounter}{53}
+
+
+\problem  % Problem 54
+Д-ть, что сумма всех двугранных углов тетраэдра больше $2 \pi$ и $< 3 \pi$.
+и может принимать любые значения в этих пределах.
+
+
+\problem  % Problem 55
+$\log_{2}{3} \mathrel{\vee} \log_{3}{5}$
+
+
+\problem  % Problem 56
+Избавиться от иррациональности в знаменателе $\dfrac{1}{\sqrt[3]{a} + \sqrt[3]{b} + \sqrt[3]{c}}$
+
+
+% Skip problem 57
+\setcounter{problemcounter}{57}
+
+
+\problem  % Problem 58
+$\exists$ ли $\alpha$ и такие рацион.\ $p$ и $T$, что
+\begin{equation*}
+  \cos^2 \alpha + p \cos\alpha + T \,
+  = \, 0 \,
+  = \, \cos^2 2 \alpha + p \cos 2 \alpha + T ,
+\end{equation*}
+а $\cos\alpha$ и $\cos 2\alpha$ - иррациональны.
+
+
+% Skip problems 59--61
+\setcounter{problemcounter}{61}
+
+
+\problem  % Problem 62
+$3^{\sqrt{2}} \mathrel{\vee} 2^{\sqrt{5}}$
+
+
+\problem  % Problem 63
+$\dfrac{8 \pi}{27} \mathrel{\vee} \sin\dfrac{8}{7}$
+
+
+% Skip problems 64, 65
+\setcounter{problemcounter}{65}
+
+
+\problem  % Problem 66
+Д-ть, что $\sin\ang{10}$ - иррац.
+
+
+\problem  % Problem 67
+Построить отрезок $\paren{a^{\frac{1}{4}} + b^{\frac{1}{4}}}^{4}$.
+
+
+\problem  % Problem 68
+Найти $\tg\dfrac{\pi}{7} \tg\dfrac{2 \pi}{7} \tg\dfrac{3 \pi}{7}$
+
+
+\end{document}

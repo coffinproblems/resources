@@ -1,0 +1,431 @@
+\input{pdfinfo}
+
+\documentclass{article}
+
+% Preamble
+\usepackage[russian]{babel}
+\input{preamble/preamble}
+
+% Title
+\title{}
+\author{}
+\date{}
+
+
+\newcommand{\strikethrough}[1]{  % To represent text that in the original document has been crossed out
+  \ifmmode%
+    \mathcolor{gray}{#1}%
+  \else%
+    \textcolor{gray}{\textsl{#1}}%
+}
+
+
+\begin{document}
+
+\strikethrough{Дан $\triangle$ $ABC$ найти}
+
+
+\problem[Задача ]  % Problem 1
+$x \paren{8 \sqrt{1 - x} + \sqrt{1 + x}} \leq 11 \sqrt{1 + x} - 16 \sqrt{1 - x}$; $x > 0$.
+
+Замена $y = \sqrt{\frac{1 + x}{1 - x}}$ или наоборот.
+
+
+\problem[Задача ]  % Problem 2
+В тетраэдре суммы противоположных ребер равны.
+Доказать, что суммы противоположных двугранных углов равны.
+
+
+\problem  % Problem 3
+Биссектрисой трехгранного угла называется ГМТ, равноудаленных от его ребер.
+Найти необходимое и достаточное условие, чтобы две биссектрисы тетраэдра пересекались.
+
+
+\problem  % Problem 4
+Среди тетраэдров с данным объемом найти тетраэдр с максимальным радиусом вписанного шара.
+
+
+\problem  % Problem 5
+$M$ - мн-во чисел вида $A + B \sqrt{2}$, $A$ и $B$ - целые.
+Док-ть, что в любой окрестности любого числа найдется бесконечное число чисел мн-ва $M$.
+
+
+\problem  % Problem 6
+Т.\ $O$ лежит внутри $\triangle$-ка $ABC$,
+причем $\angle ABC = 80$, $\angle OAC = 10$; $\angle OCA = 30$.
+$BO : AC = k$. Найти $\angle ABO$.
+
+
+\problem  % Problem 7
+Найти все функции $F\paren{x}$ такие, что для любых $x_1$ и $x_2 \;$
+$F\paren{x_1} - F\paren{x_2} \leq \paren{x_1 - x_2}^2$.
+
+
+\problem  % Problem 8
+Решить ур-ние: $\sqrt{107 + \sqrt{107 + x}} = x$
+
+Реш.
+($\sqrt{107 + x} = y
+ \implies
+ \sqrt{107 + y} = x
+ \implies
+ y = x
+ \qquad
+ \sqrt{107 + x} = x$)
+
+
+\problem  % Problem 9
+Числа $\alpha_1, \alpha_2, \dotsc, \alpha_n$ образуют арифметическую прогрессию.
+Найти $\: \displaystyle{\sum\limits_{i = 1}^{n - 1} \frac{1}{\cos\alpha_i \cos\alpha_{i+1}}}$
+
+
+\problem  % Problem 10
+Дан $\triangle$ $ABC$.
+Построить т.\ $K$ на стороне $AB$ и т.\ $M$ на стороне $BC$ так, чтобы $AK = KM = MC$.
+
+
+\problem  % Problem 11
+В тетраэдре $KABC$ $\; AB = BC = CA$ и $\angle KAB = \angle KBC = \angle KCA$.
+Док-ть, что $KABC$ - правильная пирамида.
+
+
+\problem  % Problem 12
+Дан $\triangle$ $ABC$ и т.\ $O$ внутри него,
+причём $AB = BC$, $\angle ABC = \ang{80}$; $\angle AOC = 10$, $\angle OCA = 30$.
+Найти $\angle AOB$.
+(неверное условие)
+
+
+\problem  % Problem 13
+Пусть $R$ - радиус описанного, а $r$ - радиус вписанного в тетраэдр шара.
+Док-ть, что $R : r \geq 3$.
+
+
+\problem  % Problem 14
+Конечно ли множ-во пар целых чисел $A$ и $B$ таких,
+что мн-во простых делителей чисел $A$ и $B$ совпадают;
+а так же и чисел $A - 1$ и $B - 1$?
+
+Реш: $A = 2^{n} - 1, B = \paren{2^{n} - 1}^2 \implies$ бесконечно много чисел.
+
+
+\problem  % Problem 15
+Все биссектрисы $\triangle$-ка меньше $1$.
+Док-ть, что его площадь $\leq \dfrac{\sqrt{3}}{3}$.
+
+
+\problem  % Problem 16
+Построить четырехугольник по углам и диагоналям.
+
+
+\problem  % Problem 17
+Решить ур-ние:
+$\sin^{7}{x} + \dfrac{1}{\sin^{3}{x}} = \cos^{7}{x} + \dfrac{1}{\cos^{3}{x}}$.
+
+
+\problem  % Problem 18
+Реш.\ ур.\ $\paren{1 - \dfrac{1}{8} \cos^2 x}^{8} = 2 \sin^2 x$
+
+\begin{align*}
+  \paren{1 - \frac{1}{8} \cos^{2}{x}}^{8} = \sin^{2}{x}
+  \implies
+  y &= 1 - \frac{1}{8} \cos^{2}{x}
+  \qquad y^{8} - 8 y + 7 = 0
+  \qquad y = 1  \\
+  \sin^{2}{x} &= 1 - \cos^{2}{x}
+    = 1 - 8 \paren{1 - y}
+\end{align*}
+
+
+\problem  % Problem 19
+Через точку провести прямую, отсекающую от данного угла $\triangle$-к данного периметра.
+
+
+\problem  % Problem 20
+Провести полное исследование по ``$a$'': $4^{x} + 2 = a \cdot 2^{x} \sin{\pi x}$.
+
+
+\problem  % Problem 21
+Даны $4$ окр-ти, причём любая из них касается трёх других.
+Центры трёх из них лежат на одной прямой.
+Расстояние от центра $4$-той до этой прямой - $x$.
+Найти $x$, если $R$ - радиус окр-ти.
+
+
+\problem  % Problem 22
+На плоскости дана окр-ть с проведенным в ней диаметром и точка.
+Опустить перпендикуляр на диаметр с помощью одной линейки
+
+
+\problem  % Problem 23
+При помощи одного циркуля разделить отрезок на $n$ равных частей.
+
+Построить $n \cdot AB$ и провести инверсию.
+
+
+\problem  % Problem 24
+Даны три окружности радиусами $a$, $b$, $c$.
+Каждая из них касается двух других, сторон $\triangle$-ка и вневписанной окр-ти.
+Найти радиус последней.
+
+
+\problem  % Problem 25
+Может ли в сечении параллелепипеда получиться правильный пятиугольник?
+
+
+\problem  % Problem 26
+Дан правильный \strikethrough{многоугольник} $\triangle$-к и т.\ $O$, внутри него.
+$\angle BOC = x$; $\angle AOC = y$.
+Найти углы $\triangle$-ка со сторонами $AO$, $BO$, $CO$.
+
+(Повернуть вокруг $A$ на угол $\ang{60} \,$
+$\text{т.\ } O \to \text{т.\ } O^{\prime}$
+$\; \triangle$ $COO^{\prime}$ или $\triangle$ $BOO^{\prime}$ - искомый)
+
+
+\problem  % Problem 27
+В четырехугольнике $O$ - точка перес.\ диагоналей.
+Периметры $\triangle$-ков $AOB$, $BOC$, $COD$, $DOA$ равны.
+Док-ть: $ABCD$ - ромб.
+
+
+\problem  % Problem 28
+Четырехугольник $ABCD$ вписан в окр-ть с центром $O$.
+Прямая $EF \perp OK$, $K$ лежит на $EF$, $E$ - на $AB$, $F$ - на $CD$.
+Док-ть что $EK = KF$.
+
+
+\problem  % Problem 29
+$A$ - радиус описанной, а $a$ - вписанной в $\triangle$-к окр-ти.
+Расстояние между их центрами - $b$.
+Док-ть, что $A^2 - b^2 = 2 A a$.
+
+
+\problem  % Problem 30
+Даны две пересекающиеся прямые.
+Найти ГМТ сумма расстояний от которых до двух данных прямых постоянна.
+
+(прямоугольник)
+
+
+\problem  % Problem 31
+Стороны пространственного $4$-угольника касаются шара.
+Док-ть, что точки касания лежат в одной плоскости.
+
+
+\problem  % Problem 32
+Грани тетраэдра равновелики.
+Док-ть, что они равны.
+
+
+\problem  % Problem 33
+$4$-угольник со сторонами $a$, $b$, $c$, $d$ вписан и описан около окр-ти.
+Док-ть, что его площадь равна корню из abcd.
+
+У вписан.\ четырех.\ $S = \sqrt{\paren{p - a} \paren{p - b} \paren{p - c} \paren{p - d}}$
+
+
+\problem  % Problem 34
+$p_n$ - последовательность первых $n$ простых чисел.
+Док-ть, что $\displaystyle{\prod\limits_{i = 1}^n {p_i} < 4^{p_n}}$
+
+
+\problem  % Problem 35
+Есть четыре деревни лежащие в вершинах квадрата.
+Проложить прямые дороги так, чтобы из каждой деревни можно было проехать в каждую и длина дорог минимальна.
+
+
+\problem  % Problem 36
+Плоскость раскрашена в три цвета.
+Док-ть, что $\exists$ две точки одного цвета на расст.\ $1$.
+
+
+\problem  % Problem 37
+Дана последовательность $\set{a_n}$.
+Предел разности двух последовательных членов равен $0$.
+Существует ли предел самой посл.ти
+
+Ответ:
+(Необязательно. напр.\ $a_n = \sum\limits_{k = 1}^n \frac{1}{k}$
+
+
+\problem  % Problem 38
+Док-ть, что синус $\ang{10}$ иррационален.
+
+(Реш-ние:
+\begin{align*}
+  &\sin\ang{30} = 3 \sin\ang{10} - 4 \sin^3\ang{10}
+   \implies
+   8 \sin^3\ang{10} - 6 \sin\ang{10} + 1 = 0. \\
+  &2 \sin\ang{10} = x
+   \implies
+   x^3 - 3x + 1 = 0.
+\end{align*}
+Все рац.\ корни - целые и являются делителями св.\ члена члена $1$ но $\pm 1$ не подходят
+$\implies$ корни иррациональные).
+
+
+\problem  % Problem 39
+Даны отрезки $a$ и $b$.
+Построить отрезок $x$ такой, что $\sqrt[4]{x} = \sqrt[4]{a} + \sqrt[4]{b}$.
+
+(Реш: $x = a + b + 4 \paren{\sqrt[4]{a^3 b} + \sqrt[4]{a b^3}} + 6\sqrt{a b}$).
+
+
+\problem  % Problem 40
+Решить ур-ние: $x^{\paren{x^n}} = n$
+
+(Реш:
+\begin{alignat*}{2}
+  \text{у }   n &\geq 1         \quad  &x = \sqrt[n]{n}      \\
+  \text{при } x &> \sqrt[n]{n}  \quad  &x^{\paren{x^n}} > n  \\
+  \text{при } x &< \sqrt[n]{n}  \quad  &x^{\paren{x^n}} < n
+\end{alignat*}%
+)?
+
+
+\problem  % Problem 41
+Найти $\sin\ang{1}$.
+
+(Найти $\sin\ang{20}$ и $\sin\ang{18}$).
+
+
+\problem  % Problem 42
+Можно ли расположить на плоскости $6$ точек так, чтобы расстояние между любой парой точек было бы целым?
+
+
+\problem  % Problem 43
+У выпуклого мн-ка все грани $\triangle$-ники.
+Док-ть, что у него найдётся ребро, к которому примыкают $4$ острых угла.
+
+
+\problem  % Problem 44
+Реш.\ нер-во: $2^{\sin x} + 2^{\cos x} \ge 2^{1 - \frac{1}{\sqrt{2}}}$
+
+Реш:
+$2^{\sin{x}} + 2^{\cos{x}}
+ \geq 2 \sqrt{2^{\sin{x} + \cos{x}}}
+ = 2 \cdot 2^{\frac{\sqrt{2} \sin\paren{x + \frac{\pi}{4}}}{2}}
+ = 2^{1 + \frac{\sin\paren{x + \frac{\pi}{4}}}{\sqrt{2}}}
+ \geq 2^{1 - \frac{1}{\sqrt{2}}}$
+
+
+\problem  % Problem 45
+Можно ли на клетчатой бумаге расположить правильный $\triangle$-к с вершинами в узлах.
+
+
+\problem  % Problem 46
+Два $4$-угольника подобны, если у них равны соответственные углы и угол между диагоналями.
+Док-ть.
+
+
+\problem  % Problem 47
+$y = \sqrt[4]{x} + \sqrt[4]{1 - x} \;$
+Найти максимум.
+
+
+\problem  % Problem 48
+Построить $4$-уг-к по сторонам и средней линии.
+
+
+\problem  % Problem 49
+Среди всех $4$-угольников найти с самой большой площадью. (стороны заданы).
+
+
+\problem  % Problem 50
+Дано два параллельных отрезка.
+С помощью одной линейки разделить один из них на шесть равных частей.
+
+
+\problem  % Problem 51
+Может ли быть иррациональная степень иррационального числа рациональной.
+
+($\sqrt{2}^{\log_{\sqrt{2}}{3}} = 3$; $\log_{\sqrt{2}}{3} = 2 \log_{2}{3}$)
+
+
+\problem  % Problem 52
+Что больше: $\log_2 3$ или $\log_3 5$
+
+($\log_{3}{5} < \dfrac{3}{2} < \log_{2}{3}$)
+
+
+\problem  % Problem 53
+$a + b + c = 1$.
+Док-ть: $a^2 + b^2 + c^2 \geq \dfrac{1}{3}$
+
+
+\problem  % Problem 54
+Найти $\tg\dfrac{\pi}{7} \cdot \tg\dfrac{2\pi}{7} \cdot \tg\dfrac{3\pi}{7}$
+
+
+\problem  % Problem 55
+Можно ли представить функцию $f\paren{x, y} = \paren{x y}^{200} + 1$
+в виде произведения двух многочленов (один от $x$, другой от $y$)
+
+\strikethrough{$\paren{\varphi\paren{x} \pm 1} \paren{\psi\paren{y} \pm 1}
+                = \varphi\paren{x} \psi\paren{y} \pm \varphi\paren{x} \pm \psi\paren{y} + 1$}
+
+Пусть $f\paren{x, y} = P\paren{x} \cdot Q\paren{y}$
+Положим $x = 0$, тогда
+$\forall y \: Q\paren{y} \cdot P\paren{0} = 1
+ \implies
+ Q\paren{y} = \dfrac{1}{P\paren{0}}$
+\strikethrough{Тогда $Q\paren{y}$ - имеет бесконечно много корней.}
+
+
+\problem  % Problem 56
+$\abs{x} < 0.05$.
+Найти с точностью до $0.01$ значения выражения: $\sqrt[3]{2 - \sqrt{1 - x}}$
+
+
+\problem  % Problem 57
+$\sin\dfrac{8}{7} \mathrel{?} \dfrac{8}{27} \pi$
+
+
+\problem  % Problem 58
+$3^{\sqrt{2}} \mathrel{?} 2^{\sqrt{5}}$
+
+(Реш.\ подбором $\dfrac{p}{q} \quad \log_{2}{3} \mathrel{?} \dfrac{p}{q} \mathrel{?} \sqrt{\dfrac{5}{2}}$
+
+
+\problem  % Problem 59
+$C$ - середина хорды $AB$.
+Через $C$ проведены $2$ хорды, их концы соединены.
+Док-ть, что получ.\ хорды высекают на $AB$ равные отрезки.
+
+Реш:
+Пусть $AC = CB = a$.
+\begin{alignat*}{2}
+  p q &= a^2 - x^2  &\qquad  p = \frac{x \sin\beta}{\sin\varphi}  \\
+  m n &= a^2 - y^2  &\qquad  q = \frac{x \sin\alpha}{\sin\paren{\varphi + \alpha + \beta}}
+\end{alignat*}
+\begin{align*}
+  p q &= \frac{x^2 \sin\alpha \sin\beta}{\sin\paren{\varphi + \alpha + \beta} \sin\varphi}
+       = x^2 A  \\
+  m n &= y^2 A
+  \implies
+  x^2 = \frac{a^2}{A + 1}
+      = y^2
+\end{align*}
+
+
+\problem  % Problem 60
+$x^3 + 1 = 2 \sqrt[3]{2 x - 1}$
+
+(Реш: $y = \dfrac{x^3 + 1}{2}$, $y\paren{x}$ и $x\paren{y}$ - взаимно обратны
+
+
+\problem  % Problem 61
+$a^b + b^a = n$
+$\; \exists$ ли $a$ и $b$ - иррац.
+
+Док-ть $x^x = 3$ и $x$ - иррац.
+\begin{alignat*}{4}
+  &\paren{\dfrac{p}{q}}^{\frac{p}{q}} = 3  \qquad
+  &\paren{\dfrac{p}{q}}^{p} = 3^{q}  \qquad
+  &\strikethrough{p^p = q^{p} \cdot 3^{q}}  \quad
+  &\frac{p^p}{x^p} = \frac{q^{p} \cdot 2^{q}}{2^{q}}
+\end{alignat*}
+
+
+\end{document}

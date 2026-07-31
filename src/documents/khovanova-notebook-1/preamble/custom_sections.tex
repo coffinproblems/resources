@@ -1,0 +1,16 @@
+% Custom section headings
+
+% Subsection for problem
+\newcounter{problemcounter}
+\newcommand{\problem}[1][{}]{
+  \refstepcounter{problemcounter}
+  \vspace{\spaceproblems}
+  \paragraph{#1N\theproblemcounter.}
+}
+
+% How much space to leave between problems
+\newcommand{\spaceproblems}{
+  0.07\baselineskip
+  plus 0.025\baselineskip
+  minus 0.02\baselineskip
+}

@@ -11,34 +11,55 @@ which is carried out in the repository [`coffins`](https://github.com/coffinprob
 
 Work is at a very early stage.
 
-<!--
-- Total number of documents to digitise:
-- Total number of documents to translate:
--->
 
-
-## Download
+## Documents
 
 > [!WARNING]
 > The currently available material is unfinished.
+
+At the moment, the following are the included documents:
+- Selected problems from the entrance examinations at Mekhmat in Moscow State University, in the years 1979, 1982, 1986.
+- Handwritten notebooks by Tanya Khovanova, from the Soviet Union's 1975 IMO preparation camp.
 
 Downloads are available in these formats:
 - **PDF**: PDF document
 - **EPUB MathML**: reflowable ebook, with math content in MathML format;
 - **EPUB SVG**: reflowable ebook, with math content rendered as SVG;
-<!--
-- **TeX source**: standalone `.tex` file.
--->
-
 > [!NOTE]
 > At the moment, EPUB files with MathML are very poorly formatted,
 > and those with SVG have some formatting issues.
 
-|              | PDF              | EPUB MathML      | EPUB SVG         |
-|:------------:|:----------------:|:----------------:|:----------------:|
-| zadachi-1979 | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-en.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-en-svg.epub) |
-| zadachi-1982 | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-en.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-en-svg.epub) |
-| zadachi-1986 | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-en.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-en-svg.epub) |
+
+### Selected problems from the entrance examinations at Mekhmat in Moscow State University, in the years 1979, 1982, 1986.
+
+It is unclear whether the problems collected in these documents are from the oral examinations, from the written examinations, or from both,
+and it is unclear whether they are all coffin problems.  
+The documents mention that candidates were given no more than 20 minutes to solve each problem;
+but the 1986 document mentions at problem 12 that "at the written exam at MIPT, where this problem was proposed, five hours were given to solve four problems":
+it is unclear if this comment is supposed to mean the the same problem was also given in MITP at the written exam, while proposed at the oral exam in MSU.
+
+|              | Original | PDF transcription | EPUB MathML transcription | EPUB SVG transcription | PDF translation | EPUB MathML translation | EPUB SVG translation |
+|:------------:|:--------:|:-----------------:|:-------------------------:|:----------------------:|:---------------:|:-----------------------:|:--------------------:|
+| zadachi-1979 | [Here](https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu) ([archive](https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu)) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-svg.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-en.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1979-en-svg.epub) |
+| zadachi-1982 | [Here](https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu) ([archive](https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu))             | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-svg.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-en.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1982-en-svg.epub) |
+| zadachi-1986 | [Here](https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu) ([archive](https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu)) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-svg.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-en.pdf) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/documents-zadachi-1986-en-svg.epub) |
+
+
+### Tanya Khovanova's notebooks from 1975 IMO training camp
+
+At the 1975 training camp for Soviet Union's team for the International Mathematical Olympiad,
+Valery Senderov asked the students for help in solving a collection of coffin problems.  
+The following are Tanya Khovanova's notebooks about the coffin problems from that camp:
+- `khovanova-notes` consists of some loose pages.
+- `khovanova-notebook-1` is a notebook containing problems and some solution attempts; many of the problems are the same as the previous ones, but there are some differences.
+- `khovanova-notebook-2` contains the solution, or attempts, to the first 44 problems from the previous notebook.
+
+|                      | Original | PDF transcription | EPUB MathML transcription | EPUB SVG transcription | PDF translation | EPUB MathML translation | EPUB SVG translation |
+|:--------------------:|:--------:|:-----------------:|:-------------------------:|:----------------------:|:---------------:|:-----------------------:|:--------------------:|
+| khovanova-notes      | [Here](/src/documents/khovanova-notes/original_document)      | [Download](https://coffinproblems.github.io/resources/khovanova-notes.pdf)      | [Download](https://coffinproblems.github.io/resources/khovanova-notes-mathml.epub)      | [Download](https://coffinproblems.github.io/resources/khovanova-notes-svg.epub)      | [Download](https://coffinproblems.github.io/resources/khovanova-notes-en.pdf)      | [Download](https://coffinproblems.github.io/resources/khovanova-notes-en-mathml.epub)      | [Download](https://coffinproblems.github.io/resources/khovanova-notes-en-svg.epub)      |
+| khovanova-notebook-1 | [Here](/src/documents/khovanova-notebook-1/original_document) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-1.pdf) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-1-mathml.epub) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-1-svg.epub) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-1-en.pdf) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-1-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-1-en-svg.epub) |
+| khovanova-notebook-2 | [Here](/src/documents/khovanova-notebook-2/original_document) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-2.pdf) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-2-mathml.epub) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-2-svg.epub) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-2-en.pdf) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-2-en-mathml.epub) | [Download](https://coffinproblems.github.io/resources/khovanova-notebook-2-en-svg.epub) |
+
 
 
 ## Contributing
@@ -215,6 +236,8 @@ All documents made available here are already freely publicly available in their
 
 ## References
 Below is the list of resources.
+> [!NOTE]
+> The references are also available in `bib` format in the file [`references.bib`](https://github.com/coffinproblems/coffins/tree/main/src/references/references.bib)
 
 - Tanya Khovanova, Alexey Radul: _Jewish Problems_, 2011. (Preprint of _Killer Problems_).
     - doi: [10.48550/arXiv.1110.1556](https://doi.org/10.48550/arXiv.1110.1556)
@@ -309,23 +332,60 @@ Below is the list of resources.
       another updated version, differing only in the last two pages, is available at
       [https://www.academia.edu/101548394/](https://www.academia.edu/101548394/Epilogue_May_6_2023_To_You_Just_Failed_Your_Math_Test_Comrade_Einstein_World_Scientific_Singapore_2005_)
 
-- Sergei Tabachnikov: _Review of “You failed your math test, Comrade Einstein” by M. Shifman_, 2020.
+- Sergei Lvovich Tabachnikov: _Review of “You failed your math test, Comrade Einstein” by M. Shifman_, 2020.
   In _The Mathematical Intelligencer_, volume 42, pages 83–87.
     - doi: [10.1007/s00283-020-09976-y](https://doi.org/10.1007/s00283-020-09976-y)
     - URL: [https://drive.google.com/file/d/1hrcikumwsJ-svqattfX_cvc76CaU-6HG/](https://drive.google.com/file/d/1hrcikumwsJ-svqattfX_cvc76CaU-6HG/)
       (archived [here](https://web.archive.org/web/20260201183616/https://drive.usercontent.google.com/download?id=1hrcikumwsJ-svqattfX_cvc76CaU-6HG))
 
-- _Selected entrance examination problems at the Faculty of Mechanics and Mathematics of Moscow State University in 1979_.
+- User "arbat" on LiveJournal, 2003.
+    - URL: [https://bbb.livejournal.com/787297.html?thread=2688609#t2688609](https://bbb.livejournal.com/787297.html?thread=2688609#t2688609)
+      (archived [here](https://archive.today/OX7Ks#selection-11435.0-11422.12),
+      [here](https://ljsear.ch/savedcopy?comm=1344985597),
+      and [here](https://web.archive.org/web/20260201212300/https://ljsear.ch/savedcopy?comm=1344985597)).  
+      See also: [https://bbb.livejournal.com/787297.html?thread=2698081#t2698081](https://bbb.livejournal.com/787297.html?thread=2698081#t2698081)
+      (archived [here](https://ljsear.ch/savedcopy?comm=1875114955) and [here](https://web.archive.org/web/20260201212808/https://ljsear.ch/savedcopy?comm=1875114955)),
+      and [https://bbb.livejournal.com/787297.html?thread=2708577#t2708577](https://bbb.livejournal.com/787297.html?thread=2708577#t2708577)
+      (archived [here](https://ljsear.ch/savedcopy?comm=1236687776) and [here](https://web.archive.org/web/20260201212439/https://ljsear.ch/savedcopy?comm=1236687776)),
+      and [https://bbb.livejournal.com/787297.html?thread=2733921#t2733921](https://bbb.livejournal.com/787297.html?thread=2733921#t2733921)
+      (archived [here](https://web.archive.org/web/20260211051731/https://bbb.livejournal.com/787297.html?replyto=2733921)
+      and [here](https://archive.today/z2tE0#t2733921)).
+
+- User "azb1958" on LiveJournal, 2013.
+    - URL: [https://azb1958.livejournal.com/34112.html](https://azb1958.livejournal.com/34112.html)
+      (archived [here](https://web.archive.org/web/20210925084745/https://azb1958.livejournal.com/34112.html)).
+      See also [https://azb1958.livejournal.com/34112.html?thread=141376#t141376](https://azb1958.livejournal.com/34112.html?thread=141376#t141376)
+      (archived [here](https://web.archive.org/web/20260307191841/https://azb1958.livejournal.com/34112.html?replyto=141376))
+
+- Vladimir Kelman, 2013.
+    - URL: [https://kerosinka.livejournal.com/1633.html?thread=383329#t383329](https://kerosinka.livejournal.com/1633.html?thread=383329#t383329)
+      (archived [here](https://web.archive.org/web/20260222040201/https://kerosinka.livejournal.com/1633.html?replyto=383329),
+      [here](https://archive.today/CF4qL#t383329),
+      [here](https://ljsear.ch/savedcopy?comm=1194975920),
+      and [here](https://web.archive.org/web/20260201215430/https://ljsear.ch/savedcopy?comm=1194975920))
+
+- User "nieuwe_zijde" on Blogger, 2009.
+    - URL: [https://avzel.blogspot.com/2009/07/blog-post_30.html?showComment=1254948495163#c1386969495227008652](https://avzel.blogspot.com/2009/07/blog-post_30.html?showComment=1254948495163#c1386969495227008652)
+      (archived [here](https://web.archive.org/web/20190610091539/https://avzel.blogspot.com/2009/07/blog-post_30.html?showComment=1254948495163#c1386969495227008652))
+
+- _Selected problems of the oral examination in Mathematics, Mekhmat MSU, 1979_.
     - URL: [https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu](https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu)
       (archived [here](https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu))
 
-- _Selected entrance examination problems at the Faculty of Mechanics and Mathematics of Moscow State University in 1982_.
+- _Selected problems of entrance examinations, Mekhmat MSU, 1982_.
     - URL: [https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu](https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu)
       (archived [here](https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu))
 
-- _Selected entrance examination problems at the Faculty of Mechanics and Mathematics of Moscow State University in 1986_.
+- _Selected problems of entrance examinations, Mekhmat MSU in 1986_.
     - URL: [https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu](https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu)
       (archived [here](https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu))
+
+
+### Additional references
+
+These are additional resources for a more complete historical overview.
+> [!NOTE]
+> They are also listed in `bib` format in the file [`further_reading.bib`](https://github.com/coffinproblems/coffins/tree/main/src/references/further_reading.bib).
 
 - Alexander Khaniyevich Shen: _Materials related to entrance exams_.
   Collection of many resources.
@@ -353,7 +413,7 @@ Below is the list of resources.
   In _Science_, volume 203.4380, page 501.
     - doi: [10.1126/science.203.4380.501.c](https://doi.org/10.1126/science.203.4380.501.c)
     - URL: [https://www.science.org/doi/10.1126/science.203.4380.501.c](https://www.science.org/doi/10.1126/science.203.4380.501.c)
-      (archived [here](https://web.archive.org/web/20240310231109im_/https://www.science.org/cms/10.1126/science.203.4380.501.a/asset/660b82a2-8d72-45c6-b611-f99c4f61ba33/assets/science.203.4380.501.a.fp.png))
+      (archived [here](https://web.archive.org/web/20260704210009/https://www.science.org/cms/10.1126/science.203.4380.501.c/asset/4122bd21-ae6e-4f36-b8e1-d83085ea8e3a/assets/science.203.4380.501.c.fp.png))
 
 - Lev Semyonovich Pontryagin: _Soviet anti-semitism: reply by Pontryagin_, 1979 (in response to _Anti-semitism alleged in Soviet Mathematics_ by Gina Bari Kolata).
   In _Science_, volume 205.4411, pages 1083–1084.
@@ -375,6 +435,12 @@ Below is the list of resources.
     - URL: [https://arzamas.academy/materials/1148](https://web.archive.org/web/20171023084427/https://arzamas.academy/materials/1148)
       (also [here](https://web.archive.org/web/20161210142921/https://arzamas.academy/materials/1148))
 
+- Andrei Reznikov: _A few reminiscences about some peculiarities of getting a mathematical education in Moscow in the 80s_, 2007.
+    - URL: [https://u.math.biu.ac.il/~reznikov/pap/Haifa-conf.pdf](https://u.math.biu.ac.il/~reznikov/pap/Haifa-conf.pdf)
+      (archived [here](https://web.archive.org/web/20221224155536/https://u.math.biu.ac.il/~reznikov/pap/Haifa-conf.pdf)),
+      and [https://drive.google.com/file/d/1IsxJY4jBm_p-DYu-YXpO6W6u5lXw2EzT](https://drive.google.com/file/d/1IsxJY4jBm_p-DYu-YXpO6W6u5lXw2EzT/view)
+      (archived [here](https://web.archive.org/web/20260526211147/https://drive.usercontent.google.com/download?id=1IsxJY4jBm_p-DYu-YXpO6W6u5lXw2EzT))
+
 - Anatoly Moiseevich Vershik: _Admission to the mathematics faculty in Russia in the 1970s and 1980s_, 1994.
   In _The Mathematical Intelligencer_, volume 16.4, pages 4–5.
     - doi: [10.1142/9789812701169_0007](https://doi.org/https://www.lirmm.fr/~ashen/senderov/demidov.pdf)
@@ -395,10 +461,13 @@ Below is the list of resources.
 - Valery Anatolievich Senderov: _Without partaking of the Buffalo — In memory of Bella Abramovna Subbotovskaya_, 2011.
     - URL: [https://volgograd.yabloko.ru/news/index.phtml?id=1871](https://web.archive.org/web/20190927215546/https://volgograd.yabloko.ru/news/index.phtml?id=1871)
 
-- _Bella Subbotovskaya and her University_, 2007.
-    - Part 1: [https://www.youtube.com/watch?v=Xyak7yINMsI](https://www.youtube.com/watch?v=Xyak7yINMsI)
-    - Part 2: [https://www.youtube.com/watch?v=8CEN6nIN4Dk](https://www.youtube.com/watch?v=8CEN6nIN4Dk)
-    - Part 3: [https://www.youtube.com/watch?v=NDmzWMM_8wQ](https://www.youtube.com/watch?v=NDmzWMM_8wQ)
+- _Bella Subbotovskaya and her University_ (Bella Subbotovskaya Memorial Conference), Haifa, 2007.
+    - Part 1: [https://www.youtube.com/watch?v=wLTijd4OKj8](https://www.youtube.com/watch?v=wLTijd4OKj8)
+      and [https://www.youtube.com/watch?v=Xyak7yINMsI](https://www.youtube.com/watch?v=Xyak7yINMsI)
+    - Part 2: [https://www.youtube.com/watch?v=QyErAlI149g](https://www.youtube.com/watch?v=QyErAlI149g)
+      and [https://www.youtube.com/watch?v=8CEN6nIN4Dk](https://www.youtube.com/watch?v=8CEN6nIN4Dk)
+    - Part 3: [https://www.youtube.com/watch?v=Cx2MK6tD8S4](https://www.youtube.com/watch?v=Cx2MK6tD8S4)
+      and [https://www.youtube.com/watch?v=NDmzWMM_8wQ](https://www.youtube.com/watch?v=NDmzWMM_8wQ)
 
 - Wikipedia: _Bella Abramovna Subbotovskaya_.
     - Russian page: [https://ru.wikipedia.org/wiki/Субботовская,_Белла_Абрамовна](https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D0%B1%D0%B1%D0%BE%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F,_%D0%91%D0%B5%D0%BB%D0%BB%D0%B0_%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D0%BD%D0%B0)
@@ -446,7 +515,7 @@ Below is the list of resources.
 - Natalia Demina, Anatoly Moiseevich Vershik: _Through the eyes of a mathematician_, 2013.
     - URL: [https://polit.ru/article/2013/02/25/vershik1/](https://web.archive.org/web/20161109084614/https://polit.ru/article/2013/02/25/vershik1/)
 
-- Joseph Polterovich: _Valery Senderov, righteous of the world_, 2012.
+- Joseph Viktorovich Polterovich: _Valery Senderov, righteous of the world_, 2012.
     - URL: [https://polit.ru/article/2012/11/11/senderov/](https://web.archive.org/web/20201022095751/https://polit.ru/article/2012/11/11/senderov/)
 
 - Natalia Demina, Valery Anatolievich Senderov: _Against the tide_, 2014.
@@ -485,13 +554,15 @@ Below is the list of resources.
     - URL: [https://www.nobelprize.org/prizes/physics/2010/geim/biographical/](https://www.nobelprize.org/prizes/physics/2010/geim/biographical/)
       (archived [here](https://web.archive.org/web/20260215111152/https://www.nobelprize.org/prizes/physics/2010/geim/biographical/))
     - Book: [https://archive.org/details/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/](https://archive.org/details/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29/)
+      (direct link: [https://archive.org/download/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29.pdf](https://archive.org/download/nobel-lectures-in-physics-1942-1962-by-nobel-foundation%2D%7A%2D%6C%69%62%2E%6F%72%67/Nobel%20Lectures%20in%20Physics%20%282006%20-%202010%29%20by%20Lars%20Brink%2C%20Lars%20Brink%20%28%7A%2D%6C%69%62%2E%6F%72%67%29.pdf))
+    - Book doi: [10.1142/9210](https://doi.org/10.1142/9210)
     - Book ISBN: 978-981-4612-67-8 and 978-981-4612-68-5
 
 - Natalia Demina, Andre Geim: _«I — European citizen»_, 2016.
     - URL: [https://www.trv-science.ru/2016/08/ya-grazhdanin-evropy/](https://web.archive.org/web/20231024053243/https://www.trv-science.ru/2016/08/ya-grazhdanin-evropy/)
 
 
-- Igor Pak: _College admissions I. Discrimination and lies, Jews and Harvard_, 2012.
+- Igor Markovich Pak: _College admissions I. Discrimination and lies, Jews and Harvard_, 2012.
     - URL: [https://igorpak.wordpress.com/2012/12/26/college-admissions-discrimination/](https://igorpak.wordpress.com/2012/12/26/college-admissions-discrimination/)
       (archived [here](https://web.archive.org/web/20260227175113/https://igorpak.wordpress.com/2012/12/26/college-admissions-discrimination/))
 
@@ -537,40 +608,58 @@ Below is the list of resources.
     - URL: [https://blog.tanyakhovanova.com/2011/05/the-oral-exam/](https://blog.tanyakhovanova.com/2011/05/the-oral-exam/)
       (archived [here](https://web.archive.org/web/20210224202653/https://blog.tanyakhovanova.com/2011/05/the-oral-exam/))
 
+- Tanya Khovanova: _This is Not a Consultation_, 2011.
+    - URL: [https://blog.tanyakhovanova.com/2011/10/this-is-not-a-consultation/](https://blog.tanyakhovanova.com/2011/10/this-is-not-a-consultation/)
+      (archived [here](https://web.archive.org/web/20260315014944/http://blog.tanyakhovanova.com/2011/10/this-is-not-a-consultation/))
+
+- Tanya Khovanova: _Jewish Problems_, 2011.
+    - URL: [https://blog.tanyakhovanova.com/2011/10/jewish-problems/](https://blog.tanyakhovanova.com/2011/10/jewish-problems/)
+      (archived [here](https://web.archive.org/web/20260124231151/https://blog.tanyakhovanova.com/2011/10/jewish-problems/))
+
 - Tanya Khovanova: _Arnold’s Advice_, 2022.
     - URL: [https://blog.tanyakhovanova.com/2022/04/arnolds-advice/](https://blog.tanyakhovanova.com/2022/04/arnolds-advice/)
       (archived [here](https://web.archive.org/web/20260217211323/https://blog.tanyakhovanova.com/2022/04/arnolds-advice/))
 
 
-- Yevgeni Berkovich: _Editor's word_, 2003.
-  In _Notes on Jewish History_, Number 34.
-    - URL: [https://berkovich-zametki.com/Nomer34/Redakt0.htm](https://berkovich-zametki.com/Nomer34/Redakt0.htm)
-      (archived [here](https://web.archive.org/web/20120601130734/https://berkovich-zametki.com/Nomer34/Redakt0.htm))
-
 - Yevgeni Berkovich: _Mikhail Tsalenko_.
     - URL: [https://z.berkovich-zametki.com/avtory/calenko/](https://z.berkovich-zametki.com/avtory/calenko/)
       (archived [here](https://web.archive.org/web/20111012070346/https://berkovich-zametki.com/Avtory/Calenko.htm))
 
+- Yevgeni Berkovich: _Editor's word_, 2003.
+  In _Notes on Jewish History_, issue 34.
+    - URL: [https://berkovich-zametki.com/Nomer34/Redakt0.htm](https://berkovich-zametki.com/Nomer34/Redakt0.htm)
+      (archived [here](https://web.archive.org/web/20120601130734/https://berkovich-zametki.com/Nomer34/Redakt0.htm))
+
 - Mikhail Shamshonovich Tsalenko: _Facts that it is preferable not to remember_, 2009 (written in 1988).
-  (See also the comments).
+  In _Notes on Jewish History_, issue 142.
+  (See also the comments under the article).
     - URL: [https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php](https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php)
       (archived [here](https://web.archive.org/web/20260218071345/https://berkovich-zametki.com/2011/Zametki/Nomer7/Calenko1.php))
 
 - Mikhail Shamshonovich Tsalenko: _Episodes of life_, 2011.
+  In _Notes on Jewish History_, issue 144.
     - URL: [https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php](https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php)
       (archived [here](https://web.archive.org/web/20260301080722/https://berkovich-zametki.com/2011/Zametki/Nomer9/Calenko1.php))
 
-- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Last month of Summer_, 2013.
-    - URL: [https://7iskusstv.com/2013/Nomer6/Calenko1.php](https://7iskusstv.com/2013/Nomer6/Calenko1.php)
-      (archived [here](https://web.archive.org/web/20241210235501/https://7iskusstv.com/2013/Nomer6/Calenko1.php))
+- Vladimir Ilyich Babitsky: _Smoke of the Fatherland_, 2013.
+  In _Notes on Jewish History_, issue 161.
+    - URL: [https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php](https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php)
+      (archived [here](https://web.archive.org/web/20241227041051/https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php))
 
 - Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Time for change_, 2013.
+  In _Seven Arts_, number 43.5.
     - URL: [https://7iskusstv.com/2013/Nomer5/Calenko1.php](https://7iskusstv.com/2013/Nomer5/Calenko1.php)
       (archived [here](https://web.archive.org/web/20251217071520/https://7iskusstv.com/2013/Nomer5/Calenko1.php))
 
-- Vladimir Ilyich Babitsky: _Smoke of the Fatherland_, 2013.
-    - URL: [https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php](https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php)
-      (archived [here](https://web.archive.org/web/20241227041051/https://www.berkovich-zametki.com/2013/Zametki/Nomer2/Babicky1.php))
+- Mikhail Shamshonovich Tsalenko: _A look back from the blind eyes — Last month of Summer_, 2013.
+  In _Seven Arts_, number 43.6.
+    - URL: [https://7iskusstv.com/2013/Nomer6/Calenko1.php](https://7iskusstv.com/2013/Nomer6/Calenko1.php)
+      (archived [here](https://web.archive.org/web/20241210235501/https://7iskusstv.com/2013/Nomer6/Calenko1.php))
+
+- Mikhail Arkadyevich Shifman: _Notes from the old Phystech_, 2024.
+  In _Seven Arts_, number 172.11.
+    - URL: [https://7i.7iskusstv.com/y2024/nomer11/mashifman/](https://7i.7iskusstv.com/y2024/nomer11/mashifman/)
+      (archive [here](https://web.archive.org/web/20260306044624/https://7i.7iskusstv.com/y2024/nomer11/mashifman/))
 
 
 - Julia Schulman, Michael Hsieh: _Coffin Problems — How Soviet anti-Semitism buried Jewish scientists_, 2021.
@@ -607,6 +696,8 @@ Below is the list of resources.
 ### User discussions
 
 Relevant user discussions and forum posts.
+> [!NOTE]
+> These are also listed in `bib` format in the file [`discussions.bib`](https://github.com/coffinproblems/coffins/tree/main/src/references/discussions.bib).
 
 
 - Alexander Khaniyevich Shen: _Some more texts by Senderov and others_, 2014.
@@ -797,23 +888,23 @@ Relevant user discussions and forum posts.
     - URL: [https://sumlenny.livejournal.com/1360919.html](https://web.archive.org/web/20121219070619/https://sumlenny.livejournal.com/1360919.html)
 
 
-- Discussion about _Soviet College Admission — My Dad's Story (1970)_ by Ilya Volodarsky.
+- Discussion on Hacker News about _Soviet College Admission — My Dad's Story (1970)_ by Ilya Volodarsky.
     - URL: [https://news.ycombinator.com/item?id=5340553](https://news.ycombinator.com/item?id=5340553)
       (archived [here](https://web.archive.org/web/20201011224757/https://news.ycombinator.com/item?id=5340553))
 
-- Discussion about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
+- Discussion on Hacker News about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
     - URL: [https://news.ycombinator.com/item?id=4752047](https://news.ycombinator.com/item?id=4752047)
       (archived [here](https://web.archive.org/web/20171106013949/https://news.ycombinator.com/item?id=4752047))
 
-- Another discussion about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
+- Another discussion on Hacker News about _The Fifth problem: math and anti-Semitism in the Soviet Union_ (excerpt from _Love and Math_) by Edward Frenkel.
     - URL: [https://news.ycombinator.com/item?id=6999846](https://news.ycombinator.com/item?id=6999846)
       (archived [here](https://web.archive.org/web/20260306193655/https://news.ycombinator.com/item?id=6999846))
 
-- Discussion about _Jewish problems_ by Tanya Khovanova.
+- Discussion on Hacker News about _Jewish problems_ by Tanya Khovanova.
     - URL: [https://news.ycombinator.com/item?id=4759642](https://news.ycombinator.com/item?id=4759642)
       (archived [here](https://web.archive.org/web/20171110234423/https://news.ycombinator.com/item?id=4759642))
 
 
-- _Was there discrimination against Jewish people at the entrance exams to the most prestigious universities in the USSR?_, 2013.
+- (Question on History StackExchange) _Was there discrimination against Jewish people at the entrance exams to the most prestigious universities in the USSR?_, 2013.
     - URL: [https://history.stackexchange.com/questions/8774/](https://history.stackexchange.com/questions/8774/was-there-discrimination-against-jewish-people-at-the-entrance-exams-to-the-most)
       (archived [here](https://web.archive.org/web/20220407183721/https://history.stackexchange.com/questions/8774/was-there-discrimination-against-jewish-people-at-the-entrance-exams-to-the-most))
