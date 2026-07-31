@@ -101,6 +101,7 @@ jobs:
     needs: [build_environment, setup_targets]
 
     strategy:
+      fail-fast: false
       matrix:
         target_dir: ${{ fromJson(needs.setup_targets.outputs.matrix) }}
 
