@@ -93,7 +93,7 @@ jobs:
       - name: Directory name
         run: |
           path=${{ inputs.directory }}
-          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+          echo "dirname=$(basename "$path")" >> $GITHUB_ENV
 
       - name: Download PDF from build job
         uses: actions/download-artifact@v8
@@ -139,7 +139,7 @@ jobs:
       - name: Directory name
         run: |
           path=${{ inputs.directory }}
-          echo "dirname=$(basename "$(dirname "$path")")_$(basename "$path")" >> $GITHUB_ENV
+          echo "dirname=$(basename "$path")" >> $GITHUB_ENV
 
       - name: Create directories to download built PDFs
         run: sudo mkdir first second
