@@ -71,7 +71,7 @@ jobs:
                   # Extract suffix between 'main' and '.tex'
                   suffix="${main_file#main}"
                   suffix="${suffix%.tex}"
-                  latexmk ${{ inputs.flags }} -g -usepretex="${{ inputs.pre_tex }}" "${main_file}" -jobname="${{ env.dirname }}${{ inputs.filename }}${suffix}"
+                  latexmk ${{ inputs.flags }} -g -usepretex="${{ inputs.pre_tex }}" "${main_file}" -jobname="${{ inputs.filename }}${suffix}"
               fi
           done
 
@@ -86,4 +86,4 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: pdf-${{ inputs.label }}-build-publish-${{ inputs.publish }}-${{ env.dirname }}${{ inputs.filename }}
-          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename }}*.pdf
+          path: src/${{ inputs.directory }}/output/${{ inputs.filename }}*.pdf

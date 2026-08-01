@@ -56,7 +56,7 @@ jobs:
                   # Extract suffix between 'main' and '.tex'
                   suffix="${main_file#main}"
                   suffix="${suffix%.tex}"
-                  tex4ebook --build-dir "./build_mathml${suffix}" --output-dir ./output --jobname "${{ env.dirname }}${{ inputs.filename }}${suffix}-mathml" -f epub3 "${main_file}" mathml
+                  tex4ebook --build-dir "./build_mathml${suffix}" --output-dir ./output --jobname "${{ inputs.filename }}${suffix}-mathml" -f epub3 "${main_file}" mathml
               fi
           done
 
@@ -72,7 +72,7 @@ jobs:
                   # Extract suffix between 'main' and '.tex'
                   suffix="${main_file#main}"
                   suffix="${suffix%.tex}"
-                  tex4ebook --build-dir "./build_svg${suffix}" --output-dir ./output --jobname "${{ env.dirname }}${{ inputs.filename }}${suffix}-svg" -f epub "${main_file}" svg
+                  tex4ebook --build-dir "./build_svg${suffix}" --output-dir ./output --jobname "${{ inputs.filename }}${suffix}-svg" -f epub "${main_file}" svg
               fi
           done
 
@@ -86,4 +86,4 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: ebook-${{ env.dirname }}${{ inputs.filename }}
-          path: src/${{ inputs.directory }}/output/${{ env.dirname }}${{ inputs.filename }}*.epub
+          path: src/${{ inputs.directory }}/output/${{ inputs.filename }}*.epub
