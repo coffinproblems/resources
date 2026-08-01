@@ -26,8 +26,12 @@ Downloads are available in these formats:
 - **EPUB MathML**: reflowable ebook, with math content in MathML format;
 - **EPUB SVG**: reflowable ebook, with math content rendered as SVG;
 > [!NOTE]
+> At the moment, EPUB files are not provided due to failing to compile.
+<!--
+> [!NOTE]
 > At the moment, EPUB files with MathML are very poorly formatted,
 > and those with SVG have some formatting issues.
+-->
 
 
 ### Selected problems from the entrance examinations at Mekhmat in Moscow State University, in the years 1979, 1982, 1986.
