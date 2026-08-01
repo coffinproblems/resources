@@ -41,11 +41,11 @@ jobs:
             flavours: '4f ua2 wt1r wt1a'
             publish: true
 
-          - suffix: '_A'
-            flags: ''
-            pre_tex: '\def\PDFAA{}'
-            flavours: '3a ua1'
-            publish: false
+          # - suffix: '_A'
+          #   flags: ''
+          #   pre_tex: '\def\PDFAA{}'
+          #   flavours: '3a ua1'
+          #   publish: false
 
           - suffix: '_p'
             flags: '-pdflatex'
