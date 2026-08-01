@@ -103,11 +103,13 @@ jobs:
 
       - name: Validate against PDF standards ${{ inputs.flavours }}
         run: |
-          for flav in ${{ inputs.flavours }}; do
-            output=$(docker run --rm -v "$(pwd)":/data verapdf/cli --flavour $flav --format text "${{ env.dirname }}${{ inputs.filename }}.pdf")
-            if [[ "$output" != PASS* ]]; then
-              exit 1
-            fi
+          for file in *.pdf; do
+            for flav in ${{ inputs.flavours }}; do
+                output=$(docker run --rm -v "$(pwd)":/data verapdf/cli --flavour $flav --format text "$file")
+                if [[ "$output" != PASS* ]]; then
+                exit 1
+                fi
+            done
           done
 
 
@@ -149,7 +151,7 @@ jobs:
           path: .
 
       - name: Move first PDF build of ${{ env.dirname }}${{ inputs.filename }} to its directory
-        run: sudo mv ${{ env.dirname }}${{ inputs.filename }}.pdf first/${{ env.dirname }}${{ inputs.filename }}.pdf
+        run: sudo mv *.pdf first/
 
       - name: Download second PDF build of ${{ env.dirname }}${{ inputs.filename }}
         uses: actions/download-artifact@v8
@@ -158,10 +160,16 @@ jobs:
           path: .
 
       - name: Move second PDF build of ${{ env.dirname }}${{ inputs.filename }} to its directory
-        run: sudo mv ${{ env.dirname }}${{ inputs.filename }}.pdf second/${{ env.dirname }}${{ inputs.filename }}.pdf
+        run: sudo mv *.pdf second/
 
-      - name: Check if the two builds of ${{ env.dirname }}${{ inputs.filename }} match exactly
-        run: cmp -s first/${{ env.dirname }}${{ inputs.filename }}.pdf second/${{ env.dirname }}${{ inputs.filename }}.pdf
+      - name: Check if the builds of ${{ env.dirname }}${{ inputs.filename }} match exactly
+        run: |
+          set -e
+          for first_file in first/*.pdf; do
+            filename=$(basename "$first_file")
+            second_file="second/$filename"
+            cmp -s "$first_file" "$second_file"
+          done
 
 
   # build_ebook:
