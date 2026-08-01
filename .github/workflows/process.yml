@@ -50,7 +50,7 @@ jobs:
       - name: Directory name
         run: |
           path=${{ inputs.directory }}
-          echo "dirname=$(basename "$(basename "$path")" >> $GITHUB_ENV
+          echo "dirname=$(basename "$path")" >> $GITHUB_ENV
 
       - name: Write information
         run: |
