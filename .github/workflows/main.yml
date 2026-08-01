@@ -137,15 +137,15 @@ jobs:
       - name: Move PDFs to publish directory
         run: sudo mv *.pdf ./publish
 
-      # - name: Download ebooks
-      #   uses: actions/download-artifact@v8
-      #   with:
-      #     path: .
-      #     pattern: ebook-*
-      #     merge-multiple: true
-      #
-      # - name: Move ebooks to publish directory
-      #   run: sudo mv *.epub ./publish
+      - name: Download ebooks
+        uses: actions/download-artifact@v8
+        with:
+          path: .
+          pattern: ebook-*
+          merge-multiple: true
+
+      - name: Move ebooks to publish directory
+        run: sudo mv *.epub ./publish
 
       - name: Download build environment information
         uses: actions/download-artifact@v8

@@ -172,13 +172,13 @@ jobs:
           done
 
 
-  # build_ebook:
-  #   name: Build ebook ${{ inputs.directory }}${{ inputs.filename }}
-  #   if: inputs.publish == true
-  #
-  #   uses: ./.github/workflows/build_ebook.yml
-  #   with:
-  #     texlive_digest: ${{ inputs.texlive_digest }}
-  #     timestamp: ${{ inputs.timestamp }}
-  #     directory: ${{ inputs.directory }}
-  #     filename: ${{ inputs.filename }}
+  build_ebook:
+    name: Build ebook ${{ inputs.directory }}${{ inputs.filename }}
+    if: inputs.publish == true
+
+    uses: ./.github/workflows/build_ebook.yml
+    with:
+      texlive_digest: ${{ inputs.texlive_digest }}
+      timestamp: ${{ inputs.timestamp }}
+      directory: ${{ inputs.directory }}
+      filename: ${{ inputs.filename }}
