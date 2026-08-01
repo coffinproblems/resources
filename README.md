@@ -61,7 +61,7 @@ it is unclear if this comment is supposed to mean the the same problem was also 
     <tr>
       <td align="center"> zadachi-1979 </td>
       <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu"> Here </a>
-                          (<a href="https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu"> archive </a>)</td>
+                          (<a href="https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu">archive</a>)</td>
       <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1979.pdf"> Download </a></td>
       <td align="center"> (Not yet available) </td>
       <td align="center"> (Not yet available) </td>
@@ -71,7 +71,8 @@ it is unclear if this comment is supposed to mean the the same problem was also 
     </tr>
     <tr>
       <td align="center"> zadachi-1982 </td>
-      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu"> Here </a> (<a href="https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu">archive</a>)</td>
+      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu"> Here </a>
+                          (<a href="https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu">archive</a>)</td>
       <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1982.pdf"> Download </a></td>
       <td align="center"> (Not yet available) </td>
       <td align="center"> (Not yet available) </td>
@@ -81,7 +82,8 @@ it is unclear if this comment is supposed to mean the the same problem was also 
     </tr>
     <tr>
       <td align="center"> zadachi-1986 </td>
-      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu"> Here </a> (<a href="https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu">archive</a>)</td>
+      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu"> Here </a>
+                          (<a href="https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu">archive</a>)</td>
       <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1986.pdf"> Download </a></td>
       <td align="center"> (Not yet available) </td>
       <td align="center"> (Not yet available) </td>
