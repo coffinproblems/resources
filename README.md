@@ -44,49 +44,50 @@ it is unclear if this comment is supposed to mean the the same problem was also 
   <thead>
     <tr>
       <th align="center" rowspan="2"></th>
-      <th align="center" rowspan="2">Original</th>
-      <th align="center" colspan="3">Transcription</th>
-      <th align="center" colspan="3">Translation</th>
+      <th align="center" rowspan="2"> Original </th>
+      <th align="center" colspan="3"> Transcription </th>
+      <th align="center" colspan="3"> Translation </th>
     </tr>
     <tr>
-      <th align="center">PDF</th>
-      <th align="center">EPUB MathML</th>
-      <th align="center">EPUB SVG</th>
-      <th align="center">PDF</th>
-      <th align="center">EPUB MathML</th>
-      <th align="center">EPUB SVG</th>
+      <th align="center"> PDF </th>
+      <th align="center"> EPUB MathML </th>
+      <th align="center"> EPUB SVG </th>
+      <th align="center"> PDF </th>
+      <th align="center"> EPUB MathML </th>
+      <th align="center"> EPUB SVG </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center">zadachi-1979</td>
-      <td align="center"><a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu"> Here </a> (<a href="https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu">archive</a>)</td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1979.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1979-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1979-svg.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1979-en.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1979-en-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1979-en-svg.epub"> Download </a></td>
+      <td align="center"> zadachi-1979 </td>
+      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu"> Here </a>
+                          (<a href="https://web.archive.org/web/20260227111932/https://www.lirmm.fr/~ashen/senderov/zadachi-1979-color.djvu"> archive </a>)</td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1979.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1979-en.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
     </tr>
     <tr>
-      <td align="center">zadachi-1982</td>
-      <td align="center"><a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu"> Here </a> (<a href="https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu">archive</a>)</td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1982.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1982-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1982-svg.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1982-en.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1982-en-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1982-en-svg.epub"> Download </a></td>
+      <td align="center"> zadachi-1982 </td>
+      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu"> Here </a> (<a href="https://web.archive.org/web/20260223071158/https://www.lirmm.fr/~ashen/senderov/zadachi-1982.djvu">archive</a>)</td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1982.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1982-en.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
     </tr>
     <tr>
-      <td align="center">zadachi-1986</td>
-      <td align="center"><a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu"> Here </a> (<a href="https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu">archive</a>)</td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1986.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1986-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1986-svg.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1986-en.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1986-en-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/documents-zadachi-1986-en-svg.epub"> Download </a></td>
+      <td align="center"> zadachi-1986 </td>
+      <td align="center"> <a href="https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu"> Here </a> (<a href="https://web.archive.org/web/20260226060451/https://www.lirmm.fr/~ashen/senderov/zadachi-1986-color.djvu">archive</a>)</td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1986.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/zadachi-1986-en.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
     </tr>
   </tbody>
 </table>
@@ -109,49 +110,49 @@ The following are Tanya Khovanova's notebooks about the coffin problems from tha
   <thead>
     <tr>
       <th align="center" rowspan="2"></th>
-      <th align="center" rowspan="2">Original</th>
-      <th align="center" colspan="3">Transcription</th>
-      <th align="center" colspan="3">Translation</th>
+      <th align="center" rowspan="2"> Original </th>
+      <th align="center" colspan="3"> Transcription </th>
+      <th align="center" colspan="3"> Translation </th>
     </tr>
     <tr>
-      <th align="center">PDF</th>
-      <th align="center">EPUB MathML</th>
-      <th align="center">EPUB SVG</th>
-      <th align="center">PDF</th>
-      <th align="center">EPUB MathML</th>
-      <th align="center">EPUB SVG</th>
+      <th align="center"> PDF </th>
+      <th align="center"> EPUB MathML </th>
+      <th align="center"> EPUB SVG </th>
+      <th align="center"> PDF </th>
+      <th align="center"> EPUB MathML </th>
+      <th align="center"> EPUB SVG </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center">khovanova-notes</td>
-      <td align="center"><a href="/src/documents/khovanova-notes/original_document"> Here </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notes.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notes-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notes-svg.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notes-en.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notes-en-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notes-en-svg.epub"> Download </a></td>
+      <td align="center"> khovanova-notes </td>
+      <td align="center"> <a href="/src/documents/khovanova-notes/original_document"> Here </a></td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/khovanova-notes.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/khovanova-notes-en.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
     </tr>
     <tr>
-      <td align="center">khovanova-notebook-1</td>
-      <td align="center"><a href="/src/documents/khovanova-notebook-1/original_document"> Here </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-1.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-1-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-1-svg.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-1-en.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-1-en-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-1-en-svg.epub"> Download </a></td>
+      <td align="center"> khovanova-notebook-1 </td>
+      <td align="center"> <a href="/src/documents/khovanova-notebook-1/original_document"> Here </a></td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/khovanova-notebook-1.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/khovanova-notebook-1-en.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
     </tr>
     <tr>
-      <td align="center">khovanova-notebook-2</td>
-      <td align="center"><a href="/src/documents/khovanova-notebook-2/original_document"> Here </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-2.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-2-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-2-svg.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-2-en.pdf"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-2-en-mathml.epub"> Download </a></td>
-      <td align="center"><a href="https://coffinproblems.github.io/resources/khovanova-notebook-2-en-svg.epub"> Download </a></td>
+      <td align="center"> khovanova-notebook-2 </td>
+      <td align="center"> <a href="/src/documents/khovanova-notebook-2/original_document"> Here </a></td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/khovanova-notebook-2.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> <a href="https://coffinproblems.github.io/resources/khovanova-notebook-2-en.pdf"> Download </a></td>
+      <td align="center"> (Not yet available) </td>
+      <td align="center"> (Not yet available) </td>
     </tr>
   </tbody>
 </table>
